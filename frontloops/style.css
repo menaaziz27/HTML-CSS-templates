@@ -65,6 +65,12 @@ section {
 	box-shadow: 0px 0px 0px -30px rgba(0, 0, 0, 0);
 	transition: all 0.5s;
 }
+@media (max-width: 768px) {
+	.grid-cards {
+		padding: 0;
+		margin: 0;
+	}
+}
 
 .card:hover {
 	-webkit-box-shadow: 5px 16px 15px -22px #000000;
@@ -164,6 +170,25 @@ section {
 	grid-template-columns: repeat(2, 1fr);
 }
 
+@media (max-width: 768px) {
+	.challenges .container .challenges-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.challenges .container .challenges-content .image {
+		margin-bottom: 50px;
+		text-align: center;
+	}
+
+	.challenges .container .challenges-content .image img {
+		width: 100%;
+	}
+
+	.point {
+		margin-bottom: 20px;
+	}
+}
 .challenges .container .challenges-content .image img {
 	width: calc(100% - 100px);
 	box-shadow: 0px 0px 0px -30px rgba(0, 0, 0, 0);
@@ -206,6 +231,10 @@ section {
 	grid-template-columns: repeat(2, 1fr);
 }
 
+.reviews-content .review .text {
+	margin-left: 20px;
+}
+
 @media (max-width: 768px) {
 	.reviews-content {
 		grid-template-columns: repeat(1, 1fr);
@@ -220,11 +249,14 @@ section {
 
 .review .image {
 	text-align: center;
+	position: relative;
 }
 .review img {
 	width: 60px;
 	height: 40px;
 	border-radius: 50%;
+	position: absolute;
+	right: 0;
 }
 
 .join-today {
@@ -234,7 +266,7 @@ section {
 
 .join-today .container p {
 	text-align: center;
-	font-size: 30px;
+	font-size: 1.125rem;
 	font-weight: bold;
 	letter-spacing: -0.4px;
 }
@@ -250,10 +282,22 @@ section {
 	padding: 30px 10px;
 }
 
-footer .container a {
+.footer .container a {
 	text-decoration: none;
 	color: black;
 }
 .footer .container span {
 	font-weight: bold;
+}
+
+@media (max-width: 580px) {
+	.footer .container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer .container a {
+		margin-bottom: 4px;
+	}
 }
