@@ -150,6 +150,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	flex: 1;
 }
 
 .info .info-content .item img {
