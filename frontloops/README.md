@@ -1,3 +1,3 @@
 # Frontloops clone
 
-[live](https://xenodochial-agnesi-ace8d2.netlify.app/)
+[live](https://dazzling-jackson-89ac64.netlify.app/)
