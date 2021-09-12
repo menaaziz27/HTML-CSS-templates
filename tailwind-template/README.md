@@ -5,4 +5,5 @@
 <img src="dog2.png" />
 
 <br>
-live version : [Demo](https://jovial-perlman-c33112.netlify.app/)
+
+live version : [demo](https://jovial-perlman-c33112.netlify.app/)
