@@ -207,6 +207,13 @@ header .container {
 	bottom: 0;
 }
 
+.hero-buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
 @media (max-width: 1100px) {
 	.background1 {
 		display: none;
