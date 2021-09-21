@@ -10,4 +10,4 @@ I tried to clone Discord design with HTML and CSS just to make my hands dirty wi
 <br>
 <br>
 
-Live version : [demo](https://app.netlify.com/sites/discord-design-clone/settings/general)
+Live version : [demo](https://discord-design-clone.netlify.app/)
