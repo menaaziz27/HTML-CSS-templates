@@ -1,3 +1,13 @@
 # Frontloops clone
 
-[live](https://dazzling-jackson-89ac64.netlify.app/)
+single page design I've made to test my design skills.
+
+<br>
+
+<img src="./assets/frontloops.png" />
+
+<br>
+<br>
+<br>
+
+Live version : [live](https://frontloops.netlify.app/)

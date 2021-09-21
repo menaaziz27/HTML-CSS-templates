@@ -74,13 +74,8 @@ section {
 }
 
 .card:hover {
-	-webkit-box-shadow: 5px 16px 15px -22px #000000;
 	box-shadow: 5px 16px 15px -22px #000000;
-	-moz-transform: translate(0px, -4px);
-	-webkit-transform: translate(0px, -4px);
-	-o-transform: translate(0px, -4px);
-	-ms-transform: translate(0px, -4px);
-	transform: translate(0px, -8px);
+	transform: translateY(-1.05rem);
 }
 .card h3 {
 	margin-bottom: 30px;
@@ -126,6 +121,12 @@ section {
 	cursor: pointer;
 	outline: inherit;
 	background-color: aquamarine;
+	transition: transform 0.3s ease-out;
+}
+
+.btn:hover {
+	transform: translateY(-0.125rem);
+	filter: brightness(1.05);
 }
 
 .info {
