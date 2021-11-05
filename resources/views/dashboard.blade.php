@@ -10,7 +10,7 @@
             <div class="flex justify-end">
                 <a
                     class="bg-blue-500 tracking-wide text-white px-6 py-2 inline-block mb-6 shadow-lg rounded hover:shadow"
-                    href="/add"
+                    href="{{ route('movies.create') }}"
                 >
                     Create
                 </a>
@@ -66,20 +66,24 @@
                                     <span>
                                         <a
                                             class="bg-blue-500 tracking-wide text-white px-6 py-2 inline-block mb-6 shadow-lg rounded hover:shadow"
-                                            href="/movies/{{$movie->id}}/edit"
+                                            href="{{
+                                                route('movies.edit', $movie)
+                                            }}"
                                         >
                                             Edit
                                         </a>
                                     </span>
                                     <span>
                                         <form
-                                            action="/movies/{{$movie->id}}"
+                                            action="{{
+                                                route('movies.destroy', $movie)
+                                            }}"
                                             method="POST"
                                         >
                                             @method("DELETE") @csrf
                                             <button
                                                 type="submit"
-                                                class="button rounded bg-red-900 py-2 px-2 ml-2"
+                                                class="button rounded bg-red-600 py-2 px-2 ml-2 text-white"
                                             >
                                                 X
                                             </button>
