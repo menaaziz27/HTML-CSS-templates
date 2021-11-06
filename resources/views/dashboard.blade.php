@@ -46,26 +46,26 @@
                             @foreach($movies as $movie)
                             <tr class="border-gray-300 even:bg-gray-300">
                                 <td
-                                    class="px-4 py-8 border-t border-b border-gray-300 text-sm"
+                                    class="px-4 py-4 border-t border-b border-gray-300 text-sm"
                                 >
                                     {{ $movie->name }}
                                 </td>
                                 <td
-                                    class="px-4 py-8 border-t border-b border-gray-300 text-sm"
+                                    class="px-4 py-4 border-t border-b border-gray-300 text-sm"
                                 >
                                     {{ $movie->description }}
                                 </td>
                                 <td
-                                    class="px-4 py-8 border-t border-b border-gray-300 text-sm"
+                                    class="px-4 py-4 border-t border-b border-gray-300 text-sm"
                                 >
                                     {{ $movie->rating }}
                                 </td>
                                 <td
-                                    class="px-4 py-8 border-t border-b border-gray-300 text-sm flex"
+                                    class="px-4 py-4 border-t border-b border-gray-300 text-sm flex justify-center items-center"
                                 >
                                     <span>
                                         <a
-                                            class="bg-blue-500 tracking-wide text-white px-6 py-2 inline-block mb-6 shadow-lg rounded hover:shadow"
+                                            class="bg-blue-500 tracking-wide text-white px-6 py-2 inline-block shadow-lg rounded hover:shadow"
                                             href="{{
                                                 route('movies.edit', $movie)
                                             }}"
@@ -96,6 +96,7 @@
                     </table>
                 </div>
             </div>
+            {{ $movies->links() }}
         </div>
     </div>
 </x-app-layout>

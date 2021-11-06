@@ -19,6 +19,7 @@ abstract class AbstractRepository
     public function paginate($limit)
     {
         return $this->model::paginate($limit);
+        // return $this->model::all();
     }
 
     public function store($movie)
