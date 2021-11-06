@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MoviesController;
 use App\Http\Controllers\DashboardController;
 
@@ -17,15 +16,7 @@ use App\Http\Controllers\DashboardController;
 */
 
 
-
 Route::get('/dashboard', [DashboardController::class, "index"])->middleware(['auth'])->name('dashboard');
 Route::resource('/admin/movies', MoviesController::class)->middleware(['auth']);
-// Route::get('/', [HomeController::class, "index"])->middleware(['auth']);
-// Route::get('/add', [MoviesController::class, "getAdd"])->middleware(['auth']);
-// Route::post('/add', [MoviesController::class, "store"])->middleware(['auth']);
-// Route::get('/movies/{movie}/edit', [MoviesController::class, "edit"])->middleware(['auth']);
-// Route::put('/movies/{movie}', [MoviesController::class, "update"])->middleware(['auth']);
-// Route::delete('/movies/{movie}', [MoviesController::class, "destroy"])->middleware(['auth']);
-// Route::get('/movies/{movie}/details', [MoviesController::class, "details"]);
 
 require __DIR__.'/auth.php';
