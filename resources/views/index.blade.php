@@ -59,26 +59,30 @@
             </div>
         </nav>
         {{-- end navbar --}}
-        <div class="container">
-            <div class="row">
-                @foreach($movies as $movie)
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
-                    <div class="card" style="width: 18rem">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $movie->name }}</h5>
-                            <p class="card-text">{{$movie->description}}</p>
-                            <p class="text-sm">{{$movie->rating}}</p>
-                            <a
-                                href="/movies/{{$movie->id}}/details"
-                                class="btn btn-primary"
-                                >details</a
+        <!-- grid start -->
+        <section class="text-gray-600 body-font">
+            <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-wrap m-4 ">
+                    <div class="lg:w-1/4 md:w-1/2 p-4 w-full rounded border-2 border-red-500">
+                        <div class="mt-4">
+                            <h3
+                                class="text-gray-500 text-xs tracking-widest title-font mb-1"
                             >
+                                CATEGORY
+                            </h3>
+                            <h2
+                                class="text-gray-900 title-font text-lg font-medium"
+                            >
+                                The Catalyzer
+                            </h2>
+                            <p class="mt-1">$16.00</p>
                         </div>
                     </div>
+                    </div>
                 </div>
-                @endforeach
             </div>
-        </div>
+        </section>
+        <!-- grid end -->
 
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
@@ -92,3 +96,25 @@
         ></script>
     </body>
 </html>
+
+<!-- <div class="container">
+    <div class="row">
+        @foreach($movies as $movie)
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
+            <div class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">{{ $movie->name }}</h5>
+                    <p class="card-text">{{$movie->description}}</p>
+                    <p class="text-sm">{{$movie->rating}}</p>
+                    <a
+                        href="/movies/{{$movie->id}}/details"
+                        class="btn btn-primary"
+                        >details</a
+                    >
+                </div>
+            </div>
+        </div>
+        @endforeach
+        {{ $movies->links() }}
+    </div>
+</div> -->

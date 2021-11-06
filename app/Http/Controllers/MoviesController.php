@@ -3,39 +3,58 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Movie;
+use App\Managers\MoviesManager;
 
 class MoviesController extends Controller
 {
-    public function MovieDetails(Movie $movie)
-    {
-        return view("movies.details", ["movie" => $movie]);
-    }
 
-    public function getAdd() 
+    protected $movieManager;
+
+    /**
+     * MoviesManager constructor.
+     */
+    public function __construct()
     {
-        return view("movies.add");
+        $this->movieManager = new MoviesManager();
+    }
+    
+    public function index() 
+    {
+        $movies = $this->movieManager->index();
+
+        return view("dashboard", ["movies" => $movies]);
     }
 
 
     public function store(Request $request) 
     {
-        request()->validate([
-            'name' => 'required',
-            'description' => 'required',
-            'rate' => 'required',
-        ]);
+        $this->movieManager->store(request()->all());
 
-        Movie::create([
-            "name" => request("name"),
-            "description" => request("description"),
-            "rating" => intval(request("rate"))
-        ]);
-
-        // $content = $request->all();
-        // dd($content);
         return redirect('/dashboard');
+    }
 
+    public function create() 
+    {
+        return view("movies.create");
+    }
+
+    public function destroy(Movie $movie)
+    {
+        $this->movieManager->destroy($movie);
+
+        return redirect("/dashboard");
+    }
+    
+    public function show(Movie $movie)
+    {
+        return view("movies.details", ["movie" => $movie]);
+    }
+
+    public function update(Request $request, Movie $movie) 
+    {
+        $this->movieManager->update($request, $movie);
+
+        return redirect("/dashboard");
     }
 
     public function edit(Movie $movie)
@@ -43,21 +62,4 @@ class MoviesController extends Controller
         return view("movies.edit", ["movie" => $movie]);
     }
 
-    public function update(Movie $movie) 
-    {
-        $movie->update([
-            "name" => request('name'),
-            "description" => request('description'),
-            "rating" => intval(request("rate"))
-        ]);
-
-        return redirect("/dashboard");
-    }
-
-    public function destroy(Movie $movie)
-    {
-        $movie->delete();
-
-        return redirect("/dashboard");
-    }
 }

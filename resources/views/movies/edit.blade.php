@@ -7,7 +7,7 @@
 
     <div class="py-12">
         <div class="max-w-lg mx-auto">
-            <form method="POST" action="/movies/{{$movie->id}}">
+            <form method="POST" action="{{ route('movies.update', $movie) }}">
                 @method("PUT") @csrf
 
                 <div class="mb-6">
@@ -22,7 +22,6 @@
                         class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                         name="name"
                         value="{{$movie->name}}"
-                        required
                     />
                 </div>
                 <div class="mb-6">
@@ -37,7 +36,6 @@
                         name="description"
                         class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                         value="{{$movie->description}}"
-                        required
                     />
                 </div>
                 <div class="mb-6">

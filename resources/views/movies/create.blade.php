@@ -7,7 +7,7 @@
 
     <div class="py-12">
         <div class="max-w-lg mx-auto">
-            <form method="POST" action="/add">
+            <form method="POST" action="{{ route('movies.store') }}">
                 @csrf
 
                 <div class="mb-6">
