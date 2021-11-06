@@ -1,12 +1,12 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __("Dashboard") }}
+            {{ __("Movies Dashboard") }}
         </h2>
     </x-slot>
 
     <div class="py-8">
-        <div class="sm:px-6 lg:px-8">
+        <div class="sm:px-6 lg:px-8 rounded-sm">
             <div class="flex justify-end">
                 <a
                     class="bg-blue-500 tracking-wide text-white px-6 py-2 inline-block mb-6 shadow-lg rounded hover:shadow"
@@ -16,8 +16,8 @@
                 </a>
             </div>
             <div class="bg-white shadow-sm sm:rounded-lg">
-                <div class="flex flex-wrap">
-                    <table class="w-full table-auto rounded-sm">
+                <div class="flex flex-wrap rounded-sm">
+                    <table class="w-full table-auto rounded rounded-sm">
                         <thead>
                             <tr>
                                 <th
@@ -85,7 +85,7 @@
                                                 type="submit"
                                                 class="button rounded bg-red-600 py-2 px-2 ml-2 text-white"
                                             >
-                                                X
+                                                <i class="far fa-trash-alt"></i>
                                             </button>
                                         </form>
                                     </span>

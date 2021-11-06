@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MoviesController;
 use App\Http\Controllers\DashboardController;
 
@@ -16,6 +17,7 @@ use App\Http\Controllers\DashboardController;
 */
 
 
+Route::get('/', [HomeController::class, "index"]);
 Route::get('/dashboard', [DashboardController::class, "index"])->middleware(['auth'])->name('dashboard');
 Route::resource('/admin/movies', MoviesController::class)->middleware(['auth']);
 
