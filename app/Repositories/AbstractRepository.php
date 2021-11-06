@@ -20,19 +20,9 @@ abstract class AbstractRepository
         return $this->model::paginate($limit);
     }
 
-    public function store($movie)
+    public function store($newMovie)
     {
-        request()->validate([
-            'name' => 'required',
-            'description' => 'required',
-            'rate' => 'required',
-        ]);
-
-        return $this->model::create([
-            "name" => request("name"),
-            "description" => request("description"),
-            "rating" => intval(request("rate"))
-        ]);
+        return $this->model::create($newMovie);
     }
 
     public function destroy($movie)
@@ -40,12 +30,8 @@ abstract class AbstractRepository
         return $this->model::where('id', $movie->id)->delete();
     }
 
-    public function update($request, $movie)
+    public function update($movie, $updatedData)
     {
-        return $this->model::where('id', $movie->id)->update([
-            "name" => request('name'),
-            "description" => request('description'),
-            "rating" => intval(request("rate"))
-        ]);
+        return $this->model::where('id', $movie->id)->update($updatedData);
     }
 }

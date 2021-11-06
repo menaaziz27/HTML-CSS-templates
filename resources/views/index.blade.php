@@ -6,7 +6,7 @@
         <!-- styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
 
-        <title>Laravel</title>
+        <title>Home</title>
     </head>
     <body class="bg-blue-100 flex justify-center items-center h-screen w-full">
         <div class="container flex flex-col items-center">

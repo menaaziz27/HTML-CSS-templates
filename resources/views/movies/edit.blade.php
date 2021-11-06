@@ -44,7 +44,7 @@
                         class="text-sm font-medium text-gray-900 block mb-2"
                         >rating</label
                     >
-                    <select name="rate" id="rate-select">
+                    <select name="rating" id="rate-select">
                         <option value="{{$movie->rating}}">
                             {{$movie->rating}}
                         </option>
@@ -60,6 +60,13 @@
                         <option value="10">10</option>
                     </select>
                 </div>
+                @if ($errors->any()) 
+                    @foreach($errors->all() as $error)
+                        <p class="text-red-800 text-md mb-3">
+                            {{ $error }}
+                        </p>
+                    @endforeach 
+                @endif
                 <button
                     type="submit"
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"

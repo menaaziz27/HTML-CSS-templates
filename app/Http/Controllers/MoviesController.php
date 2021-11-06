@@ -51,9 +51,9 @@ class MoviesController extends Controller
         return view("movies.details", ["movie" => $movie]);
     }
 
-    public function update(Request $request, Movie $movie) 
+    public function update(Movie $movie) 
     {
-        $this->movieManager->update($request, $movie);
+        $this->movieManager->update($movie);
 
         return redirect("/dashboard");
     }
