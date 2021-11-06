@@ -12,6 +12,13 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+
+
+    public function movieModel()
+    {
+        return $this->belongsTo(Movie::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *

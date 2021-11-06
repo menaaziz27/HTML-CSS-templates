@@ -8,6 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Movie extends Model
 {
     use HasFactory;
-    protected $fillable = ["name", "description", "rating"];
+
+    public function userModel()
+    {
+        return $this->hasMany(User::class);
+    }
+
+    protected $fillable = ["name", "description", "rating", "user_id"];
     protected $hidden = ["_token"];
 }

@@ -4,6 +4,7 @@ namespace App\Managers;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 abstract class AbstractManager 
 {  
@@ -30,7 +31,9 @@ abstract class AbstractManager
             'rating' => 'required',
         ]);
 
-        return $this->repository->store($newMovie);
+        $user = Auth::user();
+
+        return $this->repository->store(["user_id" => $user->id] + $newMovie);
     }
 
     public function destroy($movie) {

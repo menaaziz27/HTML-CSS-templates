@@ -4,19 +4,13 @@ A clean architecture used to build admin dashboard
 
 ## Architecture
 
-The Architecture we followed to design the application
+The Architecture I followed to design the application
 
 ```
  \App\Models
 ```
 
 Models Used in Application
-
-```
- \App\Contracts
-```
-
-Interfaces Used in Application Contains any app contract in this simple example the database contract (Repository Interface)
 
 ```
  \App\Repositories
@@ -30,16 +24,10 @@ Repositories and Repository Base Class to handle interaction with database inste
 
 Manager Classes to handel Application Logic
 
-```
- \App\Traits
-```
-
-Traits created and used in Application
-
 ## Technology
 
--   Laravel 5.8
--   Vue js
+-   Laravel 8.65
+-   PHP 7.4.18
 
 ## Installation
 
@@ -51,5 +39,10 @@ Traits created and used in Application
 
 ## Routes
 
-> /admin/home <br>
-> /post/{POSTID}
+> /
+> /movies
+> /movies
+> /movies
+> /movies
+> /movies
+> /movies

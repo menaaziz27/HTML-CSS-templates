@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Managers\MoviesManager;
 use App\Models\Movie;
+use Illuminate\Support\Facades\Auth;
 
 class MoviesController extends Controller
 {
@@ -48,6 +49,7 @@ class MoviesController extends Controller
     
     public function show(Movie $movie)
     {
+
         return view("movies.details", ["movie" => $movie]);
     }
 
