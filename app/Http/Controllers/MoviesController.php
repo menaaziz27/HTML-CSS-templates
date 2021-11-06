@@ -49,7 +49,6 @@ class MoviesController extends Controller
     
     public function show(Movie $movie)
     {
-
         return view("movies.details", ["movie" => $movie]);
     }
 
