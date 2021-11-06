@@ -26,10 +26,6 @@ abstract class AbstractManager
         return $this->repository->store($movie);
     }
 
-    public function create() {
-
-    }
-
     public function destroy($movie) {
         return $this->repository->destroy($movie);
     }
