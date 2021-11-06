@@ -8,10 +8,10 @@ abstract class AbstractRepository
     protected $entityModel;
 
     /**
-     * BaseRepository constructor.
+     * AbstractRepository constructor.
      * @param string $entityModel
      */
-    public function __construct( string $entityModel )
+    public function __construct(string $entityModel)
     {
         if(empty($this->entityName))
         {
@@ -21,5 +21,25 @@ abstract class AbstractRepository
         }
         $this->entityName = 'App\\Models\\'.$entityModel;
         $this->entityModel = new $this->entityName();
+    }
+
+    public function paginate($limit)
+    {
+        return $this->entityModel::paginate($limit);
+    }
+
+    public function store($item)
+    {
+        return $this->entityModel::create($item);
+    }
+
+    public function destroy($item)
+    {
+        return $this->entityModel::where('id', $item->id)->delete();
+    }
+
+    public function update($item, $updatedData)
+    {
+        return $this->entityModel::where('id', $item->id)->update($updatedData);
     }
 }

@@ -11,7 +11,7 @@ class MoviesManager extends AbstractManager
     protected $repository ;
 
     /**
-     * PostManager constructor.
+     * MoviesManager constructor.
      */
     public function __construct()
     {
