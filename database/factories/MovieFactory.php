@@ -21,7 +21,7 @@ class MovieFactory extends Factory
         return [
             'name' => $this->faker->unique()->name(),
             'description' => $this->faker->sentence,
-            'rating' => $this->faker->unique()->numberBetween(1,10),
+            'rating' => $this->faker->numberBetween(1,10),
         ];
     }
 }
