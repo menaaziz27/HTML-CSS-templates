@@ -37,4 +37,8 @@ abstract class AbstractManager
     public function update($request, $movie) {
         return $this->repository->update($request, $movie);
     }
+
+    public function edit() {
+
+    }
 }
