@@ -15,6 +15,7 @@ class MovieFactory extends Factory
      */
 
     protected $model = Movie::class;
+    
     public function definition()
     {
         return [
