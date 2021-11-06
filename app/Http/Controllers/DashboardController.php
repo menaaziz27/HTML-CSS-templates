@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Managers\MoviesManager;
 
 class DashboardController extends Controller
@@ -10,7 +9,7 @@ class DashboardController extends Controller
     protected $movieManager;
 
     /**
-     * MoviesManager constructor.
+     * DashboardController constructor.
      */
     public function __construct()
     {

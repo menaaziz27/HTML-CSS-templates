@@ -11,7 +11,7 @@ abstract class AbstractManager
     protected $repository;
 
     /**
-     * PostManager constructor.
+     * AbstractManager constructor.
      */
     public function __construct($repositoryName)
     {

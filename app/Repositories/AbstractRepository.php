@@ -7,13 +7,12 @@ abstract class AbstractRepository
     protected $model;
 
     /**
-     * PostManager constructor.
+     * AbstractRepository constructor.
      */
     public function __construct($modelName)
     {
         $this->model = new $modelName();
     }
-
 
     public function paginate($limit)
     {

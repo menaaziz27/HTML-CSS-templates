@@ -53,7 +53,11 @@
                                 <td
                                     class="px-4 py-4 border-gray-300 text-sm w-1/2"
                                 >
+                                    @if(strlen($movie->description) > 50)
+                                    {{ substr($movie->description, 0, 50) . " ... " }}
+                                    @else
                                     {{ $movie->description }}
+                                    @endif
                                 </td>
                                 <td
                                     class="px-4 py-4 border-gray-300 text-sm w-1/4"

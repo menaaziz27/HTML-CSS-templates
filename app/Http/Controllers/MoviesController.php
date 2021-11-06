@@ -12,7 +12,7 @@ class MoviesController extends Controller
     protected $movieManager;
 
     /**
-     * MoviesManager constructor.
+     * MoviesController constructor.
      */
     public function __construct()
     {
