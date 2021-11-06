@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-use App\Models\Movie;
 use App\Managers\MoviesManager;
 
 class HomeController extends Controller
@@ -22,6 +20,6 @@ class HomeController extends Controller
 
     public function index() {
         $movies = $this->movieManager->index();
-        return view("index", ["movies" => $movies]);
+        return view("dashboard", ["movies" => $movies]);
     }
 }

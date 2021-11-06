@@ -2,7 +2,6 @@
 
 namespace App\Repositories;
 
-// this should be abstract
 abstract class AbstractRepository
 {
     protected $model;
@@ -19,7 +18,6 @@ abstract class AbstractRepository
     public function paginate($limit)
     {
         return $this->model::paginate($limit);
-        // return $this->model::all();
     }
 
     public function store($movie)
@@ -39,7 +37,6 @@ abstract class AbstractRepository
 
     public function destroy($movie)
     {
-        // return $this->model::destroy($movie);
         return $this->model::where('id', $movie->id)->delete();
     }
 

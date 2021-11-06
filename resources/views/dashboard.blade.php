@@ -5,8 +5,8 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl sm:px-6 lg:px-8">
+    <div class="py-8">
+        <div class="sm:px-6 lg:px-8">
             <div class="flex justify-end">
                 <a
                     class="bg-blue-500 tracking-wide text-white px-6 py-2 inline-block mb-6 shadow-lg rounded hover:shadow"
@@ -15,28 +15,28 @@
                     Create
                 </a>
             </div>
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="container flex flex-wrap">
+            <div class="bg-white shadow-sm sm:rounded-lg">
+                <div class="flex flex-wrap">
                     <table class="w-full table-auto rounded-sm">
                         <thead>
                             <tr>
                                 <th
-                                    class="px-4 py-4 text-left bg-blue-900 text-white text-sm font-medium"
+                                    class="px-4 py-4 text-left bg-blue-900 text-white text-sm font-medium w-1/4"
                                 >
                                     Movie
                                 </th>
                                 <th
-                                    class="px-4 py-4 text-left bg-blue-900 text-white text-sm font-medium"
+                                    class="px-4 py-4 text-left bg-blue-900 text-white text-sm font-medium w-1/2"
                                 >
                                     Description
                                 </th>
                                 <th
-                                    class="px-4 py-4 text-left bg-blue-900 text-white text-sm font-medium"
+                                    class="px-4 py-4 text-left bg-blue-900 text-white text-sm font-medium w-1/4"
                                 >
                                     Rating
                                 </th>
                                 <th
-                                    class="px-4 py-4 text-left bg-blue-900 text-white text-sm font-medium"
+                                    class="px-4 py-4 text-left bg-blue-900 text-white text-sm font-medium w-1/4"
                                 >
                                     actions
                                 </th>
@@ -46,31 +46,31 @@
                             @foreach($movies as $movie)
                             <tr class="border-gray-300 even:bg-gray-300">
                                 <td
-                                    class="px-4 py-4 border-t border-b border-gray-300 text-sm"
+                                    class="px-4 py-4 border-gray-300 text-sm w-1/4"
                                 >
                                     {{ $movie->name }}
                                 </td>
                                 <td
-                                    class="px-4 py-4 border-t border-b border-gray-300 text-sm"
+                                    class="px-4 py-4 border-gray-300 text-sm w-1/2"
                                 >
                                     {{ $movie->description }}
                                 </td>
                                 <td
-                                    class="px-4 py-4 border-t border-b border-gray-300 text-sm"
+                                    class="px-4 py-4 border-gray-300 text-sm w-1/4"
                                 >
                                     {{ $movie->rating }}
                                 </td>
                                 <td
-                                    class="px-4 py-4 border-t border-b border-gray-300 text-sm flex justify-center items-center"
+                                    class="px-1 border-gray-300 text-sm py-4 flex justify-center items-center w-1/4"
                                 >
                                     <span>
                                         <a
-                                            class="bg-blue-500 tracking-wide text-white px-6 py-2 inline-block shadow-lg rounded hover:shadow"
+                                            class="bg-blue-500 tracking-wide text-white px-2 py-2 inline-block shadow-lg rounded hover:shadow"
                                             href="{{
                                                 route('movies.edit', $movie)
                                             }}"
                                         >
-                                            Edit
+                                            <i class="fas fa-edit"></i>
                                         </a>
                                     </span>
                                     <span>

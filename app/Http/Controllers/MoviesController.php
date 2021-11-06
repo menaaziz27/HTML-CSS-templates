@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Managers\MoviesManager;
-use App\Models\Movie;
 
 class MoviesController extends Controller
 {
@@ -22,13 +21,15 @@ class MoviesController extends Controller
     public function index() 
     {
         $movies = $this->movieManager->index();
-        return view("index", ["movies" => $movies]);
+
+        return view("dashboard", ["movies" => $movies]);
     }
 
 
     public function store(Request $request) 
     {
         $this->movieManager->store(request()->all());
+
         return redirect('/dashboard');
     }
 
@@ -40,6 +41,7 @@ class MoviesController extends Controller
     public function destroy(Movie $movie)
     {
         $this->movieManager->destroy($movie);
+
         return redirect("/dashboard");
     }
     
@@ -51,6 +53,7 @@ class MoviesController extends Controller
     public function update(Request $request, Movie $movie) 
     {
         $this->movieManager->update($request, $movie);
+
         return redirect("/dashboard");
     }
 

@@ -13,7 +13,6 @@ abstract class AbstractManager
     /**
      * PostManager constructor.
      */
-//    movies repository
     public function __construct($repositoryName)
     {
         $this->repository = new $repositoryName();
@@ -34,18 +33,8 @@ abstract class AbstractManager
     public function destroy($movie) {
         return $this->repository->destroy($movie);
     }
-
-    public function show() {
-
-    }
-
+    
     public function update($request, $movie) {
         return $this->repository->update($request, $movie);
     }
-
-    public function edit() {
-
-    }
-
-
 }
