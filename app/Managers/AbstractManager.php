@@ -11,7 +11,7 @@ abstract class AbstractManager
     protected $repository;
 
     /**
-     * PostManager constructor.
+     * AbstractManager constructor.
      */
     public function __construct($repositoryName)
     {
@@ -22,15 +22,35 @@ abstract class AbstractManager
         return $this->repository->paginate(10);
     }
 
-    public function store($movie) {
-        return $this->repository->store($movie);
+    public function store($newMovie) {
+
+        request()->validate([
+            'name' => 'required|min:3',
+            'description' => 'required|min:3',
+            'rating' => 'required',
+        ]);
+
+        return $this->repository->store($newMovie);
     }
 
     public function destroy($movie) {
         return $this->repository->destroy($movie);
     }
     
-    public function update($request, $movie) {
-        return $this->repository->update($request, $movie);
+    public function update($movie) {
+
+        request()->validate([
+            'name' => 'required|min:3',
+            'description' => 'required|min:3',
+            'rating' => 'required',
+        ]);
+
+        $updatedData = [
+            "name" => request('name'),
+            "description" => request('description'),
+            "rating" => intval(request("rating"))
+        ];
+
+        return $this->repository->update($movie, $updatedData);
     }
 }
