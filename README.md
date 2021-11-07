@@ -31,7 +31,7 @@ Manager Classes to handel Application Logic
 
 ## Installation
 
--   Run `cp .env.example .env` and edit `.env` file with your db configurations
+-   Edit `.env` file with your db configurations
 -   Run `composer install`
 -   Run `php artisan migrate`
 -   Run `php artisan db:seed`
