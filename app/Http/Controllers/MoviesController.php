@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Managers\MoviesManager;
 use App\Models\Movie;
-use Illuminate\Support\Facades\Auth;
 
 class MoviesController extends Controller
 {
@@ -32,7 +31,7 @@ class MoviesController extends Controller
     {
         $this->movieManager->store(request()->all());
 
-        return redirect('/dashboard');
+        return redirect(route('dashboard'));
     }
 
     public function create() 
@@ -44,7 +43,7 @@ class MoviesController extends Controller
     {
         $this->movieManager->destroy($movie);
 
-        return redirect("/dashboard");
+        return redirect(route('dashboard'));
     }
     
     public function show(Movie $movie)
@@ -56,7 +55,7 @@ class MoviesController extends Controller
     {
         $this->movieManager->update($movie);
 
-        return redirect("/dashboard");
+        return redirect(route('dashboard'));
     }
 
     public function edit(Movie $movie)
