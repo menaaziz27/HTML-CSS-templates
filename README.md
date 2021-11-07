@@ -37,4 +37,4 @@ Manager Classes to handel Application Logic
 -   Run `php artisan db:seed`
 -   Run `php artisan serve`
 
-## Routes
+now go to `http://127.0.0.1:8000` in your browser

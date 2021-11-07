@@ -25,7 +25,6 @@ class MoviesManager extends AbstractManager
 
     public function store($newMovie) 
     {
-
         request()->validate([
             'name' => 'required|min:3',
             'description' => 'required|min:3',
