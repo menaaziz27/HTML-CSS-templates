@@ -1,21 +1,13 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog</title>
-</head>
-<body>
-<h1>first post</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad adipisci aut commodi consequatur consequuntur cum cumque cupiditate deleniti ea eligendi eos error est eum, excepturi fuga harum impedit incidunt ipsam iusto laboriosam natus non odit perspiciatis quaerat quas quis quod rem sit suscipit tenetur veniam vitae voluptas! Aperiam, sit.</p>
+<x-layout>
+    @include('_posts-header')
 
-<h1>second post</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad adipisci aut commodi consequatur consequuntur cum cumque cupiditate deleniti ea eligendi eos error est eum, excepturi fuga harum impedit incidunt ipsam iusto laboriosam natus non odit perspiciatis quaerat quas quis quod rem sit suscipit tenetur veniam vitae voluptas! Aperiam, sit.</p>
+    <main class="max-w-6xl mx-auto mt-6 lg:mt-20 space-y-6">
 
-<h1>third post</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad adipisci aut commodi consequatur consequuntur cum cumque cupiditate deleniti ea eligendi eos error est eum, excepturi fuga harum impedit incidunt ipsam iusto laboriosam natus non odit perspiciatis quaerat quas quis quod rem sit suscipit tenetur veniam vitae voluptas! Aperiam, sit.</p>
+        @if($posts->count())
+            <x-posts-grid :posts="$posts" />
+        @else
+            <p class="text-center">No posts yet, check it later.</p>
+        @endif
 
-</body>
-</html>
+    </main>
+</x-layout>

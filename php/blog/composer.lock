@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4842c22e789d247c4b660e69490545f",
+    "content-hash": "d9bf174b9ae29e9c580c70150b736506",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -957,6 +957,75 @@
                 }
             ],
             "time": "2021-10-06T17:43:30+00:00"
+        },
+        {
+            "name": "itsgoingd/clockwork",
+            "version": "v5.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/itsgoingd/clockwork.git",
+                "reference": "2daf30fa6dfc5a1ccfdb2142df59243a72c473d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/itsgoingd/clockwork/zipball/2daf30fa6dfc5a1ccfdb2142df59243a72c473d8",
+                "reference": "2daf30fa6dfc5a1ccfdb2142df59243a72c473d8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=5.6",
+                "psr/log": "1.* || ^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Clockwork\\Support\\Laravel\\ClockworkServiceProvider"
+                    ],
+                    "aliases": {
+                        "Clockwork": "Clockwork\\Support\\Laravel\\Facade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Clockwork\\": "Clockwork/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "itsgoingd",
+                    "email": "itsgoingd@luzer.sk",
+                    "homepage": "https://twitter.com/itsgoingd"
+                }
+            ],
+            "description": "php dev tools in your browser",
+            "homepage": "https://underground.works/clockwork",
+            "keywords": [
+                "Devtools",
+                "debugging",
+                "laravel",
+                "logging",
+                "lumen",
+                "profiling",
+                "slim"
+            ],
+            "support": {
+                "issues": "https://github.com/itsgoingd/clockwork/issues",
+                "source": "https://github.com/itsgoingd/clockwork/tree/v5.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/itsgoingd",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-11-01T17:38:35+00:00"
         },
         {
             "name": "laravel/framework",
@@ -2849,6 +2918,59 @@
                 }
             ],
             "time": "2021-09-25T23:10:38+00:00"
+        },
+        {
+            "name": "spatie/yaml-front-matter",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/yaml-front-matter.git",
+                "reference": "efb5170a92216b8d2f40874301db8eb51b8e73cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/yaml-front-matter/zipball/efb5170a92216b8d2f40874301db8eb51b8e73cc",
+                "reference": "efb5170a92216b8d2f40874301db8eb51b8e73cc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "symfony/yaml": "^3.0|^4.0|^5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\YamlFrontMatter\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A to the point yaml front matter parser",
+            "homepage": "https://github.com/sebastiandedeyne/yaml-front-matter",
+            "keywords": [
+                "front matter",
+                "jekyll",
+                "spatie",
+                "yaml"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/yaml-front-matter/issues",
+                "source": "https://github.com/spatie/yaml-front-matter/tree/master"
+            },
+            "time": "2019-12-02T20:50:50+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -5179,6 +5301,81 @@
                 }
             ],
             "time": "2021-10-26T09:30:15+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v5.3.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "4500fe63dc9c6ffc32d3b1cb0448c329f9c814b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/4500fe63dc9c6ffc32d3b1cb0448c329f9c814b7",
+                "reference": "4500fe63dc9c6ffc32d3b1cb0448c329f9c814b7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/deprecation-contracts": "^2.1",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "conflict": {
+                "symfony/console": "<4.4"
+            },
+            "require-dev": {
+                "symfony/console": "^4.4|^5.0"
+            },
+            "suggest": {
+                "symfony/console": "For validating YAML files using the lint command"
+            },
+            "bin": [
+                "Resources/bin/yaml-lint"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Loads and dumps YAML files",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/yaml/tree/v5.3.6"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-07-29T06:20:01+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -7956,5 +8153,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
