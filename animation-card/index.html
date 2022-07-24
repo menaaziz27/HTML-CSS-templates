@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>animation card</title>
+  <link rel="stylesheet"
+        href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card__content">
+        <h1 class="number">100</h1>
+        <h3>Epic me!</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quibusdam corporis molestiae asperiores? Ex!</p>
+        <a href="#"
+           class="card__btn">
+          Learn More!
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card__content">
+        <h1 class="number">100</h1>
+        <h3>Epic me!</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quibusdam corporis molestiae asperiores? Ex!</p>
+        <a href="#"
+           class="card__btn">
+          Learn More!
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card__content">
+        <h1 class="number">100</h1>
+        <h3>Epic me!</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quibusdam corporis molestiae asperiores? Ex!</p>
+        <a href="#"
+           class="card__btn">
+          Learn More!
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript"
+          src="vanilla-tilt.js"></script>
+
+  <script type="text/javascript">
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+      max: 25,
+      speed: 400,
+      glare: true,
+      'max-glare': 1
+    });
+
+    //It also supports NodeList
+    VanillaTilt.init(document.querySelectorAll(".card"));
+  </script>
+</body>
+
+</html>
