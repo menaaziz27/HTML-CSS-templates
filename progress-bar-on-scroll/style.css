@@ -1,0 +1,17 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--dark: hsl(229, 75.9%, 15.9%, 1);
+}
+
+#progress-bar {
+	--progress: 0;
+	width: var(--progress);
+	height: 6px;
+	background-color: var(--dark);
+	position: fixed;
+}
